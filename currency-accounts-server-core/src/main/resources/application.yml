@@ -1,0 +1,30 @@
+server:
+  port: 8080
+spring:
+  profiles:
+    active: useSchedulers
+  datasource:
+    url: "jdbc:postgresql://localhost:5432/test-db"
+    username: "test"
+    password: "test"
+  liquibase:
+    change-log: "classpath:db.changelog/db.changelog-master.xml"
+    drop-first: false
+  jpa:
+    hibernate:
+      dialect: "org.hibernate.dialect.PostgreSqlDialect"
+management:
+  endpoints:
+    web:
+      base-path=:
+refresh-rates:
+  scheduler:
+    cron: "00 20 12 * * ?"
+    retry-count: 3
+    retry-delay-in-sec: 10
+nbp:
+  client:
+    base-url: "https://api.nbp.pl"
+    max-attempts-per-request: 3
+    delay-between-attempts-in-millis: 3000
+

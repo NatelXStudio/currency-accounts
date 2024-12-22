@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.natelxstudio</groupId>
+        <artifactId>currency-accounts</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <artifactId>currency-accounts-nbp-provider</artifactId>
+
+    <properties>
+        <wiremock.version>3.10.0</wiremock.version>
+        <jetty-reactive-client.version>4.0.8</jetty-reactive-client.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.natelxstudio</groupId>
+            <artifactId>currency-accounts-rate-store</artifactId>
+            <version>${currency-accounts-api.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webflux</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.wiremock</groupId>
+            <artifactId>wiremock-jetty12</artifactId>
+            <version>${wiremock.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-reactive-httpclient</artifactId>
+            <version>${jetty-reactive-client.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+</project>

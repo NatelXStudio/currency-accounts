@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Configuration status="info" name="CurrencyAccountsLoggingConfig">
+
+    <Appenders>
+        <Console name="ConsoleAppender">
+            <PatternLayout pattern="%d %highlight{[%-5p]}{STYLE=Logback} %c - %m - traceId: %X{traceId} - spanId: %X{spanId} %n %throwable{separator(|)}" />
+        </Console>
+    </Appenders>
+
+    <Loggers>
+        <Root level="INFO">
+            <AppenderRef ref="ConsoleAppender"/>
+        </Root>
+    </Loggers>
+
+</Configuration>

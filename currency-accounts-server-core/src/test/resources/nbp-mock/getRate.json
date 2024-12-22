@@ -1,0 +1,28 @@
+{
+  "mappings": [
+    {
+      "request": {
+        "method": "GET",
+        "urlPathTemplate": "/api/exchangerates/rates/a/{currencyFrom}"
+      },
+      "response": {
+        "status": 200,
+        "jsonBody": {
+          "table": "A",
+          "currency": "dolar amerykański",
+          "code": "USD",
+          "rates": [
+            {
+              "no": "247/A/NBP/2024",
+              "effectiveDate": "2024-12-20",
+              "mid": 4.100
+            }
+          ]
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    }
+  ]
+}
