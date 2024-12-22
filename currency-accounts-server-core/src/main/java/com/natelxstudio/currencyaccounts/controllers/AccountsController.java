@@ -27,7 +27,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class AccountsController {
     private final AccountsStoreFacade accountsStoreFacade;
 
-    //This should be kafka/rabbitmq listener to ensure synchronization, not rest controller
     @PostMapping
     public ResponseEntity<InsertBankAccountResponseDto> addNewAccount(
         @Valid @RequestBody InsertBankAccountRequestDto insertBankAccountRequestDto

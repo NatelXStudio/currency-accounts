@@ -22,7 +22,7 @@ public class ExchangeController {
     private final RateStoreFacade rateStoreFacade;
     private final AccountsStoreFacade accountsStoreFacade;
 
-    //This should be kafka/rabbitmq listener to ensure synchronization, not rest controller
+    //This should be kafka/rabbitmq listener to ensure synchronization between transactions, not rest controller
     @PostMapping
     public ResponseEntity<Void> exchange(
         @Valid @RequestBody ExchangeRequestDto exchangeRequestDto
