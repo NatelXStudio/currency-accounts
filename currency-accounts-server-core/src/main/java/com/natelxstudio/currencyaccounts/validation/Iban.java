@@ -14,7 +14,7 @@ import java.lang.annotation.Target;
 @Retention(RUNTIME)
 @ReportAsSingleViolation
 public @interface Iban {
-    String message() default "userinfo.validation.Iban.message";
+    String message() default "currencyaccounts.validation.Iban.message";
     Class<?>[] groups() default {};
     Class<? extends Payload>[] payload() default {};
 }
